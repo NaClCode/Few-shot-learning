@@ -55,10 +55,11 @@ def get_dataloader(args):
     num_workers=args.num_workers*num_device if args.multi_gpu else args.num_workers
     trainset = Dataset('train', args, augment=args.augment)
     args.num_class = trainset.num_class
+    # CategoriesSampler 是样本抽样
     train_sampler = CategoriesSampler(trainset.label,
                                       num_episodes,
                                       max(args.way, args.num_classes),
-                                      args.shot + args.query)
+                                      args.shot + args.query) 
 
     train_loader = DataLoader(dataset=trainset,
                                   num_workers=num_workers,
@@ -91,6 +92,8 @@ def get_dataloader(args):
     return train_loader, val_loader, test_loader
 
 def prepare_model(args):
+    print(args)
+    print(args.__class__)
     model = eval(args.model_class)(args)
 
     # load pre-trained model (no FC weights)

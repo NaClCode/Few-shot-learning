@@ -23,7 +23,7 @@ class FSLTrainer(Trainer):
         super().__init__(args)
 
         self.train_loader, self.val_loader, self.test_loader = get_dataloader(args)
-        self.model, self.para_model = prepare_model(args)
+        self.model, self.para_model = prepare_model(args) #para_model采用GPU并行化模型
         self.optimizer, self.lr_scheduler = prepare_optimizer(self.model, args)
 
     def prepare_label(self):

@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 
 function download() {
     printf "\033[32mstart to download $2 in $current/saves/$1\033[0m\n"

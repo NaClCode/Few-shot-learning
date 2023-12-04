@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 from model.trainer.fsl_trainer import FSLTrainer
+import pickle
 from model.utils import (
     pprint, set_gpu,
     get_command_line_parser,
@@ -13,13 +14,15 @@ if __name__ == '__main__':
     args = postprocess_args(parser.parse_args())
     # with launch_ipdb_on_exception():
     pprint(vars(args))
+    pickle.dump(args, open('args.pkl', 'wb'))
+    
 
-    set_gpu(args.gpu)
-    trainer = FSLTrainer(args)
-    trainer.train()
-    trainer.evaluate_test()
-    trainer.final_record()
-    print(args.save_path)
+    # set_gpu(args.gpu)
+    # trainer = FSLTrainer(args)
+    # trainer.train()
+    # trainer.evaluate_test()
+    # trainer.final_record()
+    # print(args.save_path)
 
 
 
