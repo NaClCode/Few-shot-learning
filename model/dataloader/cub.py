@@ -9,7 +9,7 @@ from torchvision import transforms
 THIS_PATH = osp.dirname(__file__)
 ROOT_PATH1 = osp.abspath(osp.join(THIS_PATH, '..', '..', '..'))
 ROOT_PATH2 = osp.abspath(osp.join(THIS_PATH, '..', '..'))
-IMAGE_PATH = osp.join(ROOT_PATH1, 'FEAT-master/data/cub/images')
+IMAGE_PATH = osp.join(ROOT_PATH1, 'FEAT/data/cub/images')
 SPLIT_PATH = osp.join(ROOT_PATH2, 'data/cub/split')
 CACHE_PATH = osp.join(ROOT_PATH2, 'FEAT-master/.cache/')
 

@@ -1,5 +1,7 @@
 # Few-Shot Learning via Embedding Adaptation with Set-to-Set Functions
 
+在原来代码的基础上，在README.md中添加对代码的理解，具体见README.ipynb，同时使用MAR数据集进行训练，训练结果见output.txt。
+
 The code repository for "Few-Shot Learning via Embedding Adaptation with Set-to-Set Functions" [[paper]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Ye_Few-Shot_Learning_via_Embedding_Adaptation_With_Set-to-Set_Functions_CVPR_2020_paper.pdf) [[ArXiv]](https://arxiv.org/abs/1812.03664) [[slides]](https://drive.google.com/file/d/17LpnSuT-fy-Je7hWxHV7o61jVFDQf3TK/view?usp=sharing) [[poster]](https://drive.google.com/file/d/1R4_eoxI9VrfUMzgcoBG9veJG2fhhQzxi/view?usp=sharing) (Accepted by CVPR 2020) in PyTorch. If you use any content of this repo for your work, please cite the following bib entry:
 
     @inproceedings{ye2020fewshot,

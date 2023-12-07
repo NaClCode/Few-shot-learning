@@ -27,6 +27,8 @@ class CategoriesSampler():
                 l = self.m_ind[c]
                 pos = torch.randperm(len(l))[:self.n_per]
                 batch.append(l[pos])
+            import pickle 
+            batch = pickle.dumps(batch, open(f'test{i_batch}.pkl', 'wb'))
             batch = torch.stack(batch).t().reshape(-1)
             yield batch
 

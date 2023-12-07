@@ -14,7 +14,7 @@ if __name__ == '__main__':
     args = postprocess_args(parser.parse_args())
     # with launch_ipdb_on_exception():
     pprint(vars(args))
-    pickle.dump(args, open('args.pkl', 'wb'))
+    pickle.dump(args, open('args_MAR.pkl', 'wb'))
     
 
     # set_gpu(args.gpu)
